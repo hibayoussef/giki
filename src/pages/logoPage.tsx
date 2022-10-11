@@ -4,6 +4,7 @@ import logo from '../../public/logo.png';
 import { Center } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
+import ModalComp from '../components/Modal';
 
 
 // 2. Update the breakpoints as key-value pairs
@@ -43,7 +44,7 @@ const LogoPage = () => {
                             409px
                             Height
                             41.14px */}
-                        <Button bg='#FF8C1E' color='#FFFFFF' width={['170px', '250px', '300px', '350px', '409px']} fontSize={['10px', '12px', '12px', '14px', '14px']} height="41.14px" >Button</Button>
+                        <ModalComp />
                     </Center>
                 </GridItem>
             </Grid>
