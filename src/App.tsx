@@ -12,14 +12,17 @@ import {
 import LogoPage from "./pages/logoPage"
 import ModalComp from "./components/Modal"
 import { RecoilRoot } from "recoil"
+import WelcomeToGiki from "./components/giki-stepper/welcome-to-giki"
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     {/* <LogoPage /> */}
-    <RecoilRoot>
-      {/* <ModalComp /> */}
-      <LogoPage />
-    </RecoilRoot>
+    {/* <RecoilRoot> */}
+    {/* <ModalComp /> */}
+    {/* <LogoPage />
+    </RecoilRoot> */}
 
+    <WelcomeToGiki />
+    
   </ChakraProvider>
 )
