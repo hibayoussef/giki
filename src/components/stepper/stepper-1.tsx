@@ -23,7 +23,7 @@ const StepperComp = () => {
                     <StepperButton onClick={() => setPageNumber(pageNumber + 1)} title={'Next'} num={pageNumber} />
                 </Center>
                 <Center>
-                    <StepperButton onClick={() => setPageNumber(pageNumber - 1)} title={'Previous'} num={pageNumber}/>
+                    <StepperButton onClick={() => setPageNumber(pageNumber - 1)} title={'Back'} num={pageNumber}/>
                 </Center>
                 <ThreeDots activePoint={pageNumber} />
             </Grid>

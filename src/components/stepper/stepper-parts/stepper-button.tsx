@@ -3,41 +3,53 @@ import React from 'react';
 
 export const StepperButton: React.FC<{ title: string, num: number; onClick: (...args: any) => void }> = ({ title, num, onClick }) => {
 
-    const [show, setShow] = React.useState(false);
 
+    const bgColor = () =>{
+        if(title==='Back'){
+            return 'Transparent'
+        }
 
-    const disabledButton = () => {
-        if (title === 'Previous' && num === 0) {
-            return true;
+        else {
+            return '#FF8C1E'
         }
     }
 
-    const hideButton = () => {
-        if (title === 'Next' && num === 2 || title === 'Previous' && num === 0) {
-            return false;
+    const colorText = () =>{
+        if(title === 'Next'){
+            return '#FFFFFF'
+        }
+        else {
+            return 'black'
         }
     }
-
-
 
     return <>
-        <Button
-            style={{
-                width: '244.71px',
-                height: '41.41px',
-                backgroundColor: '#FF8C1E',
-                borderRadius: '8px',
-                fontWeight: '600',
-                fontSize: '14px',
-                lineHeight: '21px',
-                color: '#FFFFFF',
-                textTransform: 'uppercase'
-            }}
-            isDisabled={disabledButton()}
-            // onClick={()=>{ onClick; onOpen; }}
-            onClick={() => { onClick(); hideButton(); }}
-        >
-            {title}</Button>
+        {(num === 0 && title === "Back") || (num === 2 && title === "Next")
+            ?
+            ""
+            :
+            (
+                <Button
+                
+                    bg= {bgColor()}
+                    color={colorText()}
+                    style={{
+                        width: '244.71px',
+                        height: '41.41px',
+                        borderRadius: '8px',
+                        fontWeight: '600',
+                        fontSize: '14px',
+                        lineHeight: '21px',
+                        // color: '#FFFFFF',
+                        textTransform: 'uppercase', 
+                        marginTop: '12.87px'
+                    }}
+                    // onClick={()=>{ onClick; onOpen; }}
+                    onClick={() => { onClick();}}
+                >
+                    {title}</Button>
+            )
+        }
 
     </>
 }
