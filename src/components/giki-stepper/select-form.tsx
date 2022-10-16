@@ -1,5 +1,6 @@
 import { Box, Select, VStack, Text, Center, Stack } from '@chakra-ui/react';
 import React from 'react';
+import StepperTitle from '../shared/stepper-title';
 
 const languages = [
     { value: 'En', label: 'English (US)' },
@@ -20,34 +21,14 @@ const countries = [
 
 const SelectForm = () => {
 
-    const [languageName, setLanguageName] = React.useState(''); 
-    const [countryName, setCountryName] = React.useState(''); 
+    const [languageName, setLanguageName] = React.useState('');
+    const [countryName, setCountryName] = React.useState('');
 
     return (
         <VStack pt='72.35px' ml='50px' mr='50px'>
-            <Box>
-                <Stack>
-                    <Text
-                        color='#434E61'
-                        fontWeight='700'
-                        fontSize={['18px', '23px', '23px', '25px', '28px']}
-                        lineHeight='34px'
-                    >
-                        Pick your language and
-                    </Text>
-                    <Center>
-                        <Text
-                            color='#434E61'
-                            fontWeight='700'
-                            fontSize={['18px', '23px', '23px', '25px', '28px']}
-                            lineHeight='34px'
-                        >
-                            country/region
-                        </Text>
-                    </Center>
-                </Stack>
 
-            </Box>
+            <StepperTitle title_part_1='Pick your language and' title_part_2='country/region' />
+            
 
             <Box pt='77.51px'>
                 <Center>
@@ -57,7 +38,7 @@ const SelectForm = () => {
                         bg='#F6F6F6'
                         borderRadius='8px'
                         color='#B3B3B3'
-                        onChange={e=>setLanguageName(e.target.value)}
+                        onChange={e => setLanguageName(e.target.value)}
                     >
                         {/* <option value='option1'>Option 1</option>
                     <option value='option2'>Option 2</option>
@@ -81,7 +62,7 @@ const SelectForm = () => {
                         bg='#F6F6F6'
                         borderRadius='8px'
                         color='#B3B3B3'
-                        onChange={e=>setCountryName(e.target.value)}
+                        onChange={e => setCountryName(e.target.value)}
                     >
                         {/* <option value='option1'>Option 1</option>
                     <option value='option2'>Option 2</option>

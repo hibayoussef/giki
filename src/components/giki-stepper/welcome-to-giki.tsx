@@ -1,7 +1,4 @@
 import { Box, Circle, Flex, Stack, VStack, Text, Center, Input, InputGroup, InputLeftElement, InputRightElement } from '@chakra-ui/react';
-import React from 'react';
-import { FaBeer } from 'react-icons/fa';
-import { RiPencilLine } from "react-icons/ri";
 import { EditableComp } from '../helper-stepper/editableComp';
 
 const WelcomeToGiki = () => {

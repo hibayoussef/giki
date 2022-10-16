@@ -10,11 +10,7 @@ const StepperComp = () => {
     const [stepperPagess, _] = useRecoilState(stepperPages)
     const [pageNumber, setPageNumber] = useRecoilState(pageNumberState);
 
-    // TODO
-    // Handle eadge cases for 0 and above 3
-    const handleSetPageNumber = () => {
-
-    }
+    
     return (
         <>
             <Grid>

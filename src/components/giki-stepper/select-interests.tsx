@@ -1,7 +1,20 @@
 import { VStack, Box, Text, Center, Circle, Stack, Image, Grid, HStack, Button, Link } from '@chakra-ui/react';
 import React from 'react';
+import { ImagesListProps } from '../common/interests/data/interfaces';
 import InterestCard from '../helper-stepper/interestCard';
 import MessageModal from '../helper-stepper/messageModal';
+import StepperTitle from '../shared/stepper-title';
+
+export const imagesSrc = [
+    { src1: 'images/interest-1.png' },
+    { src1: 'images/interest-2.png' },
+    { src1: 'images/interest-3.png' },
+    { src1: 'images/interest-4.png' },
+    { src1: 'images/interest-5.png' },
+    { src1: 'images/interest-6.png' },
+    { src1: 'images/interest-7.png' },
+    { src1: 'images/interest-8.png' }
+]
 
 const SelectInterests = () => {
     const [counter, setCounter] = React.useState(0);
@@ -44,51 +57,20 @@ const SelectInterests = () => {
         setIsHovering(false);
     };
 
+  
+
     return (
         <VStack pt='72.35px'>
-            <Box>
-                <VStack>
-                    <Text
-                        fontWeight='700'
-                        fontSize={['18px', '23px', '23px', '25px', '28px']}
-                        lineHeight='34px'
-                        color='#434E61'
+            <StepperTitle title_part_1=' Tell us what you’re' title_part_2='interested in' />
 
-                    >
-                        Tell us what you’re
-                    </Text>
-
-                    <Center>
-                        <Text
-                            fontWeight='700'
-                            fontSize={['18px', '23px', '23px', '25px', '28px']}
-                            lineHeight='34px'
-                            color='#434E61'
-                        >
-                            interested in
-                        </Text>
-                    </Center>
-                </VStack>
-            </Box>
-
-            {/* <Circle
-                    onClick={() => console.log('Hi i am in circle tag')}
-                    bg='#434E61'
-                    size={['100.77px', '108.77px', '113.77px', '119.77px', '123.77px']}
-                    borderRadius='8PX'
-                >
-                    <Text fontSize={['30px', '35px', '40px', '45px', '50px']} fontWeight='700' color='#FFFFFF' lineHeight='61px'>
-                        A
-                    </Text>
-                </Circle> */}
-
-            {/* <InterestCard title='Hi' src=''/>*/}
+          
             <Stack>
                 <HStack pt='73px'>
 
                     <Box w="130.7px" rounded="20px"
                         h='125.04px'
                         overflow="hidden"
+                        
 
                     >
                         {/* <Text>Hi</Text> */}

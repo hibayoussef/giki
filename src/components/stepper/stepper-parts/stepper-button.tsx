@@ -29,8 +29,7 @@ export const StepperButton: React.FC<{ title: string, num: number; onClick: (...
             ""
             :
             (
-                <Button
-                
+                <Button          
                     bg= {bgColor()}
                     color={colorText()}
                     style={{
