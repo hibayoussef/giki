@@ -2,7 +2,7 @@ import { Box, Circle, Flex, Stack, VStack, Text, Center, Input, InputGroup, Inpu
 import React from 'react';
 import { FaBeer } from 'react-icons/fa';
 import { RiPencilLine } from "react-icons/ri";
-import { EditableComp } from '../s/editableComp';
+import { EditableComp } from '../helper-stepper/editableComp';
 
 const WelcomeToGiki = () => {
     return (
@@ -42,17 +42,8 @@ const WelcomeToGiki = () => {
 
             <EditableComp />
 
-            <Box mt='14.45px'>
-                <Text
-                    fontWeight='500'
-                    fontSize={['12px', '12px', '12.5px', '13px', '13px']}
-                    lineHeight='19px'
-                    textAlign='center'
-                    color='#262626'
-                >
-                    Your answers to the next few questions will help
-                </Text>
-                <Center>
+            <Box mt='14.45px' pb='28.4px'>
+                <Stack>
                     <Text
                         fontWeight='500'
                         fontSize={['12px', '12px', '12.5px', '13px', '13px']}
@@ -60,9 +51,20 @@ const WelcomeToGiki = () => {
                         textAlign='center'
                         color='#262626'
                     >
-                        us find the right communities for you
+                        Your answers to the next few questions will help
                     </Text>
-                </Center>
+                    <Center>
+                        <Text
+                            fontWeight='500'
+                            fontSize={['12px', '12px', '12.5px', '13px', '13px']}
+                            lineHeight='19px'
+                            textAlign='center'
+                            color='#262626'
+                        >
+                            us find the right communities for you
+                        </Text>
+                    </Center>
+                </Stack>
 
             </Box>
         </VStack>

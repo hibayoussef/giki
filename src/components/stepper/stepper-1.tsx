@@ -1,4 +1,4 @@
-import { Grid } from '@chakra-ui/react';
+import { Center, Grid } from '@chakra-ui/react';
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import { PlaceHolderComponent } from './stepper-parts/place-holder';
@@ -19,8 +19,12 @@ const StepperComp = () => {
         <>
             <Grid>
                 <PlaceHolderComponent Content={() => stepperPagess[pageNumber]} />
-                <StepperButton onClick={() => setPageNumber(pageNumber + 1)} title={'Next'} />
-                <StepperButton onClick={() => setPageNumber(pageNumber - 1)} title={'Previous'} />
+                <Center>
+                    <StepperButton onClick={() => setPageNumber(pageNumber + 1)} title={'Next'} num={pageNumber} />
+                </Center>
+                <Center>
+                    <StepperButton onClick={() => setPageNumber(pageNumber - 1)} title={'Previous'} num={pageNumber}/>
+                </Center>
                 <ThreeDots activePoint={pageNumber} />
             </Grid>
         </>

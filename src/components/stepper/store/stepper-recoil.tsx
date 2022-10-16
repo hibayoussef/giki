@@ -1,7 +1,8 @@
 import { atom, selector } from "recoil";
-import { FirstStepperPage } from '../stepper-pages/page1';
-import { SecondStepperPage } from "../stepper-pages/page2";
-import { ThirdStepperPage } from "../stepper-pages/page3";
+import SelectForm from "../../giki-stepper/select-form";
+import SelectInterests from "../../giki-stepper/select-interests";
+import WelcomeToGiki from "../../giki-stepper/welcome-to-giki";
+
 export const pageNumberState = atom({
   key: "pageNumber",
   default: 0,
@@ -10,7 +11,7 @@ export const pageNumberState = atom({
 
 export const stepperPages = atom({
   key: "stepperPages",
-  default: [ <FirstStepperPage />,<SecondStepperPage />,<ThirdStepperPage />] as any[],
+  default: [ <WelcomeToGiki />,<SelectForm />,<SelectInterests />] as any[],
 });
 
 export const infoValue = selector({
