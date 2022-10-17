@@ -47,12 +47,11 @@ const SelectInterests = () => {
 
     const [isHovering, setIsHovering] = React.useState(false);
 
+
+
+
     const handleMouseEnter = () => {
         setIsHovering(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovering(false);
     };
 
 
@@ -65,7 +64,7 @@ const SelectInterests = () => {
             <Stack>
                 <HStack pt='73px'>
 
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]} rounded="10px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="10px"
                         h='125.04px'
                         overflow="hidden"
                         style={{
@@ -75,7 +74,7 @@ const SelectInterests = () => {
                             borderWidth: isHovering ? '1px' : ''
                         }}
                         onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                    // onMouseLeave={handleMouseLeave}
 
                     >
                         <Link onClick={imageClickable}>
@@ -85,11 +84,10 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="10px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="10px"
                         h='125.04px'
                         overflow="hidden"
-
-                    >
+                        >
                         <Link onClick={imageClickable}>
                             <Image src='images/interest-2.png'
                                 alt="Card Image"
@@ -97,10 +95,9 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="20px"
                         h='125.04px'
                         overflow="hidden"
-
                     >
                         <Link onClick={imageClickable}>
                             <Image src='images/interest-3.png'
@@ -109,7 +106,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
@@ -122,10 +119,9 @@ const SelectInterests = () => {
                     </Box>
                 </HStack><HStack pt='10px'>
 
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="20px"
                         h='125.04px'
                         overflow="hidden"
-
                     >
                         <Link onClick={imageClickable}>
                             <Image src='images/interest-5.png'
@@ -134,7 +130,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
@@ -145,7 +141,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
@@ -156,7 +152,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
+                    <Box w={["80.7px", "100.7px", "110.7px", "120.7px", "130.7px"]} rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
