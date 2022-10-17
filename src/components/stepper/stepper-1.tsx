@@ -6,37 +6,30 @@ import { infoValue, pageNumberState, stepperPages } from './store/stepper-recoil
 import { ThreeDots } from './stepper-parts/three-dots';
 import { StepperButton } from './stepper-parts/stepper-button';
 
+
 const StepperComp = () => {
     const [stepperPagess, _] = useRecoilState(stepperPages)
     const [pageNumber, setPageNumber] = useRecoilState(pageNumberState);
 
     const info = useRecoilValue(infoValue);
-
     return (
         <>
             <Grid>
                 <PlaceHolderComponent Content={() => stepperPagess[pageNumber]} />
-                {
-                    pageNumber === 2 &&
-                    <Center>
-                        <StepperButton
-                            isDisabled={!info?.allowedToProceed}
-                            onClick={() => setPageNumber(pageNumber + 1)}
-                            title={'Next'}
-                            backgroundColor={'#FF8C1E'}
-                        />
-                    </Center>
-                }
-                {
-                    pageNumber > 0 &&
-                    <Center>
-                        <StepperButton
-                            isDisabled={false}
-                            onClick={() => setPageNumber(pageNumber - 1)}
-                            title={'Back'}
-                            backgroundColor={'Transparent'} />
-                    </Center>
-                }
+                <Center>
+                    <StepperButton
+                    isDisabled={!info?.allowedToProceed}
+                    onClick={() => setPageNumber(pageNumber + 1)}
+                    title={'Next'}
+                    num={pageNumber}
+                    />
+                </Center>
+                <Center>
+                    <StepperButton isDisabled={false}
+                    onClick={() => setPageNumber(pageNumber + 1)}
+                    title={'Back'}
+                    num={pageNumber}/>
+                </Center>
                 <ThreeDots activePoint={pageNumber} />
             </Grid>
         </>
