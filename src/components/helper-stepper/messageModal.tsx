@@ -19,8 +19,9 @@ const MessageModal = (counter: any) => {
             <Button
                 mt='53.11px'
                 mb='53.11px'
-                w='244.71px'
-                h='41.14px'
+                w={['215.71px', '220.71px', '230.71px', '237.71px', '244.71px']}
+                h={['33.41px', '35.41px', '38.41px', '40.41px', '41.41px']}
+                fontSize={['11px', '12px', '13px', '13.5px', '14px']}
                 borderRadius='8px'
                 p='10px' m='10px'
                 bg={getColor()}
@@ -42,11 +43,13 @@ const MessageModal = (counter: any) => {
 
                     <ModalBody>
                         <Center alignSelf='center' pt='20px'>
-                            <BiCheckShield size='46px' color='green' />
+                            <BiCheckShield
+                            size= '2rem' 
+                            color='green' />
                         </Center>
 
                         <Center>
-                            <Text color='green' fontSize='20px' fontWeight='700'>
+                            <Text color='green' fontSize={['15px', '17px', '18px', '19px', '20px']} fontWeight='700'>
                                 Success
                             </Text>
                         </Center>

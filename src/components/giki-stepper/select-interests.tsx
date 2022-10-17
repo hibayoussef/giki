@@ -187,9 +187,10 @@ const SelectInterests = () => {
                             <MessageModal counter={counter} />
                         ) : (
                             <Button
-                                w='244.71px'
-                                h='41.14px'
                                 // colorScheme='orange'
+                                w={['215.71px', '220.71px', '230.71px', '237.71px', '244.71px']}
+                                h={['33.41px', '35.41px', '38.41px', '40.41px', '41.41px']}
+                                fontSize={['11px', '12px', '13px', '13.5px', '14px']}
                                 bg={getColor()}
                                 color='white'
                                 borderRadius='8px'
