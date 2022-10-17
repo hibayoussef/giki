@@ -67,13 +67,19 @@ const SelectInterests = () => {
             <Stack>
                 <HStack pt='73px'>
 
-                    <Box w="130.7px" rounded="20px"
+                    <Box w="130.7px" rounded="10px"
                         h='125.04px'
                         overflow="hidden"
-                        
+                        style={{
+                            backgroundColor: isHovering ? 'red' : '',
+                            color: isHovering ? 'white' : '',
+                            borderColor: isHovering ? 'red': '', 
+                            borderWidth: isHovering ? '1px' : ''
+                        }}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
 
                     >
-                        {/* <Text>Hi</Text> */}
                         <Link onClick={imageClickable}>
                             <Image src='images/interest-1.png'
                                 alt="Card Image"
@@ -81,8 +87,6 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-
-
                     <Box w="130.7px" rounded="10px"
                         h='125.04px'
                         overflow="hidden"

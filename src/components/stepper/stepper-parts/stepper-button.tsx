@@ -1,54 +1,35 @@
 import { Button } from '@chakra-ui/button';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
-export const StepperButton: React.FC<{ title: string, num: number; onClick: (...args: any) => void }> = ({ title, num, onClick }) => {
+export const StepperButton: React.FC<{
+    title: string,
+    onClick: MouseEventHandler;
+    isDisabled: boolean;
+    backgroundColor?: string;
+    style?: Record<string, string>
+}> = ({ title, onClick, isDisabled, backgroundColor, style = {
+    width: '244.71px',
+    height: '41.41px',
+    borderRadius: '8px',
+    fontWeight: '600',
+    fontSize: '14px',
+    lineHeight: '21px',
+    // color: '#FFFFFF',
+    textTransform: 'uppercase',
+    marginTop: '12.87px'
+} }) => {
 
-
-    const bgColor = () =>{
-        if(title==='Back'){
-            return 'Transparent'
-        }
-
-        else {
-            return '#FF8C1E'
-        }
-    }
-
-    const colorText = () =>{
-        if(title === 'Next'){
-            return '#FFFFFF'
-        }
-        else {
-            return 'black'
-        }
-    }
-
-    return <>
-        {(num === 0 && title === "Back") || (num === 2 && title === "Next")
-            ?
-            ""
-            :
+        return <>
             (
-                <Button          
-                    bg= {bgColor()}
-                    color={colorText()}
-                    style={{
-                        width: '244.71px',
-                        height: '41.41px',
-                        borderRadius: '8px',
-                        fontWeight: '600',
-                        fontSize: '14px',
-                        lineHeight: '21px',
-                        // color: '#FFFFFF',
-                        textTransform: 'uppercase', 
-                        marginTop: '12.87px'
-                    }}
-                    // onClick={()=>{ onClick; onOpen; }}
-                    onClick={() => { onClick();}}
-                >
-                    {title}</Button>
+            <Button
+                bg={backgroundColor}
+                color={'white'}
+                style={style}
+                onClick={onClick}
+                isDisabled={isDisabled}
+            >
+                {title}</Button>
             )
-        }
 
-    </>
-}
+        </>
+    }

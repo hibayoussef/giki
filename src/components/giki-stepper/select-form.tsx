@@ -1,6 +1,8 @@
 import { Box, Select, VStack, Text, Center, Stack } from '@chakra-ui/react';
 import React from 'react';
+import { useRecoilState } from 'recoil';
 import StepperTitle from '../shared/stepper-title';
+import { selectedCountryState, selectedLanguageState } from '../stepper/store/stepper-recoil';
 
 const languages = [
     { value: 'En', label: 'English (US)' },
@@ -21,9 +23,8 @@ const countries = [
 
 const SelectForm = () => {
 
-    const [languageName, setLanguageName] = React.useState('');
-    const [countryName, setCountryName] = React.useState('');
-
+    const [country, setSelectedCountry] = useRecoilState(selectedCountryState)
+    const [language, setSelectedLanguage] = useRecoilState(selectedLanguageState);
     return (
         <VStack pt='72.35px' ml='50px' mr='50px'>
 
@@ -38,7 +39,10 @@ const SelectForm = () => {
                         bg='#F6F6F6'
                         borderRadius='8px'
                         color='#B3B3B3'
-                        onChange={e => setLanguageName(e.target.value)}
+                        onChange={({target: { value }}) => {
+                            setSelectedLanguage(value);
+                        }}
+                        value={language}
                     >
                         {/* <option value='option1'>Option 1</option>
                     <option value='option2'>Option 2</option>
@@ -62,7 +66,10 @@ const SelectForm = () => {
                         bg='#F6F6F6'
                         borderRadius='8px'
                         color='#B3B3B3'
-                        onChange={e => setCountryName(e.target.value)}
+                        onChange={({target: { value }}) => {
+                            setSelectedCountry(value);
+                        }}
+                        value={country}
                     >
                         {/* <option value='option1'>Option 1</option>
                     <option value='option2'>Option 2</option>

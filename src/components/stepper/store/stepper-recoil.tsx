@@ -9,6 +9,18 @@ export const pageNumberState = atom({
 });
 
 
+export const selectedLanguageState = atom({
+  key: "selectedLanguageState",
+  default: '',
+});
+
+
+export const selectedCountryState = atom({
+  key: "selectedCountryState",
+  default: '',
+});
+
+
 export const stepperPages = atom({
   key: "stepperPages",
   default: [ <WelcomeToGiki />,<SelectForm />,<SelectInterests />] as any[],
@@ -17,6 +29,9 @@ export const stepperPages = atom({
 export const infoValue = selector({
   key: "infoValue",
   get: ({ get }) => ({
-    pageNumber: get(pageNumberState)
+    pageNumber: get(pageNumberState),
+    allowedToProceed:
+        get(pageNumberState) === 1 ? (get(selectedLanguageState) !== '' && get(selectedCountryState) !== '') : true,
+
   }),
 });
