@@ -1,4 +1,4 @@
-import { VStack, Box, Text, Center, Circle, Stack, Image, Grid, HStack, Button, Link } from '@chakra-ui/react';
+import { VStack, Box, Center, Stack, Image, HStack, Button, Link } from '@chakra-ui/react';
 import React from 'react';
 import MessageModal from '../helper-stepper/messageModal';
 import StepperTitle from '../shared/stepper-title';
@@ -55,23 +55,23 @@ const SelectInterests = () => {
         setIsHovering(false);
     };
 
-  
+
 
     return (
         <VStack pt='72.35px'>
             <StepperTitle title_part_1=' Tell us what you’re' title_part_2='interested in' />
 
-          
+
             <Stack>
                 <HStack pt='73px'>
 
-                    <Box w="130.7px" rounded="10px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]} rounded="10px"
                         h='125.04px'
                         overflow="hidden"
                         style={{
                             backgroundColor: isHovering ? 'red' : '',
                             color: isHovering ? 'white' : '',
-                            borderColor: isHovering ? 'red': '', 
+                            borderColor: isHovering ? 'red' : '',
                             borderWidth: isHovering ? '1px' : ''
                         }}
                         onMouseEnter={handleMouseEnter}
@@ -85,17 +85,9 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w="130.7px" rounded="10px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="10px"
                         h='125.04px'
                         overflow="hidden"
-                        style={{
-                            backgroundColor: isHovering ? 'red' : '',
-                            color: isHovering ? 'white' : '',
-                            borderColor: isHovering ? 'red': '', 
-                            borderWidth: isHovering ? '1px' : ''
-                        }}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
 
                     >
                         <Link onClick={imageClickable}>
@@ -105,7 +97,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w="130.7px" rounded="20px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
                         h='125.04px'
                         overflow="hidden"
 
@@ -117,7 +109,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w="130.7px" rounded="20px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
@@ -128,9 +120,9 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                </HStack><HStack pt='73px'>
+                </HStack><HStack pt='10px'>
 
-                    <Box w="130.7px" rounded="20px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
                         h='125.04px'
                         overflow="hidden"
 
@@ -142,7 +134,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w="130.7px" rounded="20px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
@@ -153,7 +145,7 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    <Box w="130.7px" rounded="20px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
@@ -164,14 +156,11 @@ const SelectInterests = () => {
                             </Image>
                         </Link>
                     </Box>
-                    {/* <span onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" > */}
-                    <Box w="130.7px" rounded="20px"
+                    <Box w={["80.7px", "100.7px","110.7px", "120.7px", "130.7px"]}  rounded="20px"
                         h='125.04px'
                         overflow="hidden"
                     >
-                        <Link onClick={imageClickable}
-                            style={{}}
-                        >
+                        <Link onClick={imageClickable}>
                             <Image src='images/interest-8.png'
                                 alt="Card Image"
                             >
@@ -187,7 +176,6 @@ const SelectInterests = () => {
                             <MessageModal counter={counter} />
                         ) : (
                             <Button
-                                // colorScheme='orange'
                                 w={['215.71px', '220.71px', '230.71px', '237.71px', '244.71px']}
                                 h={['33.41px', '35.41px', '38.41px', '40.41px', '41.41px']}
                                 fontSize={['11px', '12px', '13px', '13.5px', '14px']}

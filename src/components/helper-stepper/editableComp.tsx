@@ -1,6 +1,4 @@
-import { Center, Editable, EditableInput, EditablePreview, Spacer } from '@chakra-ui/react';
-import React from 'react';
-import { RiPencilLine } from "react-icons/ri";
+import { Center, Editable, EditableInput, EditablePreview } from '@chakra-ui/react';
 
 export const EditableComp = () => {
     return (
@@ -18,13 +16,11 @@ export const EditableComp = () => {
                         fontWeight='700'
                         lineHeight='33px'
                         color='#FF8C1E'
-                    // marginLeft='5rem'
                     />
                 </Center>
                 <EditableInput
                     pl='5px'
                     bg='#F6F6F6'
-                // marginRight='2rem'
                 />
             </Editable>
         </>

@@ -1,4 +1,4 @@
-import { Box, Circle, Flex, Stack, VStack, Text, Center, Input, InputGroup, InputLeftElement, InputRightElement } from '@chakra-ui/react';
+import { Box, Circle, Stack, VStack, Text, Center } from '@chakra-ui/react';
 import { EditableComp } from '../helper-stepper/editableComp';
 
 const WelcomeToGiki = () => {
@@ -9,8 +9,6 @@ const WelcomeToGiki = () => {
                     bg='#434E61'
                     size={['100.77px', '108.77px', '113.77px', '119.77px', '123.77px']}
                     borderRadius='8PX'
-                // ml='16'
-
                 >
                     <Text fontSize={['30px', '35px', '40px', '45px', '50px']} fontWeight='700' color='#FFFFFF' lineHeight='61px'>
                         A

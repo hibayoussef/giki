@@ -1,5 +1,4 @@
-import { Box, Select, VStack, Text, Center, Stack } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Select, VStack, Center } from '@chakra-ui/react';
 import { useRecoilState } from 'recoil';
 import StepperTitle from '../shared/stepper-title';
 import { selectedCountryState, selectedLanguageState } from '../stepper/store/stepper-recoil';
@@ -26,11 +25,10 @@ const SelectForm = () => {
     const [country, setSelectedCountry] = useRecoilState(selectedCountryState)
     const [language, setSelectedLanguage] = useRecoilState(selectedLanguageState);
     return (
-        // <VStack pt='72.35px' ml='50px' mr='50px'>
         <VStack pt='72.35px' >
 
-             <StepperTitle title_part_1='Pick your language and' title_part_2='country/region' />
-            
+            <StepperTitle title_part_1='Pick your language and' title_part_2='country/region' />
+
 
             <Box pt='77.51px'>
                 <Center>
@@ -41,14 +39,11 @@ const SelectForm = () => {
                         bg='#F6F6F6'
                         borderRadius='8px'
                         color='#B3B3B3'
-                        onChange={({target: { value }}) => {
+                        onChange={({ target: { value } }) => {
                             setSelectedLanguage(value);
                         }}
                         value={language}
                     >
-                        {/* <option value='option1'>Option 1</option>
-                    <option value='option2'>Option 2</option>
-                    <option value='option3'>Option 3</option> */}
                         {
                             languages.map(language => {
                                 return <option
@@ -68,15 +63,12 @@ const SelectForm = () => {
                         bg='#F6F6F6'
                         borderRadius='8px'
                         color='#B3B3B3'
-                        onChange={({target: { value }}) => {
+                        onChange={({ target: { value } }) => {
                             setSelectedCountry(value);
                         }}
                         value={country}
                         fontSize={['12px', '13px', '13px', '14px', '14px']}
                     >
-                        {/* <option value='option1'>Option 1</option>
-                    <option value='option2'>Option 2</option>
-                    <option value='option3'>Option 3</option> */}
                         {
                             countries.map(country => {
                                 return <option key={country.value} value={country.value} >{country.label}</option>

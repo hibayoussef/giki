@@ -1,4 +1,4 @@
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react';
+import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import StepperComp from './stepper/stepper-1';
 
@@ -25,18 +25,18 @@ const ModalComp = () => {
 
     return (
         <>
-           {sizes.map((size) => (
-                <Button  onClick={() => handleSizeClick(size)}
-                key={size}
-                m={4} bg='#FF8C1E' color='#FFFFFF' width={['170px', '250px', '300px', '350px', '409px']} 
-                fontSize={['10px', '12px', '12px', '14px', '14px']} height="41.14px"
-                style={{
-                    backgroundColor: isHovering ? '#FF8C1E' : '',
-                    color: isHovering ? 'white' : '',
-                    borderColor: isHovering ? '#FF8C1E': ''
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+            {sizes.map((size) => (
+                <Button onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4} bg='#FF8C1E' color='#FFFFFF' width={['170px', '250px', '300px', '350px', '409px']}
+                    fontSize={['10px', '12px', '12px', '14px', '14px']} height="41.14px"
+                    style={{
+                        backgroundColor: isHovering ? '#FF8C1E' : '',
+                        color: isHovering ? 'white' : '',
+                        borderColor: isHovering ? '#FF8C1E' : ''
+                    }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
 
                 >{`Open Modal`}</Button>
             ))}
@@ -44,7 +44,6 @@ const ModalComp = () => {
             <Modal onClose={onClose} size={size} isOpen={isOpen}>
                 <ModalOverlay />
                 <ModalContent>
-                    {/* <ModalHeader>Modal Title</ModalHeader> */}
                     <ModalCloseButton />
                     <ModalBody>
                         <StepperComp />
