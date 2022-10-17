@@ -8,9 +8,9 @@ export const StepperButton: React.FC<{
     isDisabled: boolean;
     backgroundColor?: string;
     style?: Record<string, string>
-}> = ({ title, num, onClick, isDisabled, backgroundColor}) => {
+}> = ({ title, num, onClick, isDisabled, backgroundColor }) => {
 
-const bgColor = () => {
+    const bgColor = () => {
         if (title === 'Back') {
             return 'Transparent'
         }
@@ -41,7 +41,7 @@ const bgColor = () => {
         setIsHovering(false);
     };
 
-   
+
     return <>
         {(num === 0 && title === "Back") || (num === 2 && title === "Next")
             ?
@@ -49,20 +49,19 @@ const bgColor = () => {
             :
             (
                 <Button
-                    
+
                     // *********************
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
-
+                    w={['215.71px', '220.71px', '230.71px', '237.71px', '244.71px']}
+                    h={['33.41px', '35.41px', '38.41px', '40.41px', '41.41px']}
+                    fontSize={['11px', '12px', '13px', '13.5px', '14px']}
+                    fontWeight='600'
                     // *********************
                     style={{
                         backgroundColor: isHovering ? '#FF8C1E' : bgColor(),
                         color: isHovering ? 'white' : colorText(),
-                        width: '244.71px',
-                        height: '41.41px',
                         borderRadius: '8px',
-                        fontWeight: '600',
-                        fontSize: '14px',
                         lineHeight: '21px',
                         textTransform: 'uppercase',
                         marginTop: '12.87px'

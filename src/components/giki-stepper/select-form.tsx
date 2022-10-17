@@ -26,9 +26,10 @@ const SelectForm = () => {
     const [country, setSelectedCountry] = useRecoilState(selectedCountryState)
     const [language, setSelectedLanguage] = useRecoilState(selectedLanguageState);
     return (
-        <VStack pt='72.35px' ml='50px' mr='50px'>
+        // <VStack pt='72.35px' ml='50px' mr='50px'>
+        <VStack pt='72.35px' >
 
-            <StepperTitle title_part_1='Pick your language and' title_part_2='country/region' />
+             <StepperTitle title_part_1='Pick your language and' title_part_2='country/region' />
             
 
             <Box pt='77.51px'>
@@ -36,6 +37,7 @@ const SelectForm = () => {
                     <Select placeholder='Select Language'
                         w={['280.64px', '310.64px', '320.64px', '340.64px', '360.64px']}
                         h='41.14px'
+                        fontSize={['12px', '13px', '13px', '14px', '14px']}
                         bg='#F6F6F6'
                         borderRadius='8px'
                         color='#B3B3B3'
@@ -70,6 +72,7 @@ const SelectForm = () => {
                             setSelectedCountry(value);
                         }}
                         value={country}
+                        fontSize={['12px', '13px', '13px', '14px', '14px']}
                     >
                         {/* <option value='option1'>Option 1</option>
                     <option value='option2'>Option 2</option>
@@ -82,7 +85,6 @@ const SelectForm = () => {
                     </Select>
                 </Center>
             </Box>
-
         </VStack>
     )
 }
