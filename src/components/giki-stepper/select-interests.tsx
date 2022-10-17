@@ -1,7 +1,5 @@
 import { VStack, Box, Text, Center, Circle, Stack, Image, Grid, HStack, Button, Link } from '@chakra-ui/react';
 import React from 'react';
-import { ImagesListProps } from '../common/interests/data/interfaces';
-import InterestCard from '../helper-stepper/interestCard';
 import MessageModal from '../helper-stepper/messageModal';
 import StepperTitle from '../shared/stepper-title';
 

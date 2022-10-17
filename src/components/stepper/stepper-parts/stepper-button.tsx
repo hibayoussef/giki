@@ -31,6 +31,17 @@ const bgColor = () => {
         }
     }
 
+    const [isHovering, setIsHovering] = React.useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+    };
+
+   
     return <>
         {(num === 0 && title === "Back") || (num === 2 && title === "Next")
             ?
@@ -38,16 +49,21 @@ const bgColor = () => {
             :
             (
                 <Button
-                    bg={bgColor()}
-                    color={colorText()}
+                    
+                    // *********************
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+
+                    // *********************
                     style={{
+                        backgroundColor: isHovering ? '#FF8C1E' : bgColor(),
+                        color: isHovering ? 'white' : colorText(),
                         width: '244.71px',
                         height: '41.41px',
                         borderRadius: '8px',
                         fontWeight: '600',
                         fontSize: '14px',
                         lineHeight: '21px',
-                        // color: '#FFFFFF',
                         textTransform: 'uppercase',
                         marginTop: '12.87px'
                     }}
